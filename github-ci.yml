@@ -1,0 +1,27 @@
+stages:
+  - build
+  - test
+  - deploy
+
+# Build Stage
+build_job:
+  stage: build
+  script:
+    - echo "Building the project..."
+    - echo "Compile or prepare your app here"
+
+# Test Stage
+test_job:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - echo "Execute unit tests here"
+
+# Deploy Stage
+deploy_job:
+  stage: deploy
+  script:
+    - echo "Deploying application..."
+    - echo "Deploy to server or hosting platform"
+  only:
+    - main
